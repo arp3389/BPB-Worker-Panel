@@ -5490,72 +5490,72 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 <details open>
                     <summary><h2>VLESS / TROJAN \u2699\uFE0F</h2></summary>
                     <div class="form-control">
-                        <label for="remoteDNS">\u{1F30F} Remote DNS</label>
+                        <label for="remoteDNS">\u{1F30F} 远程 DNS</label>
                         <input type="url" id="remoteDNS" name="remoteDNS" value="${remoteDNS}" required>
                     </div>
                     <div class="form-control">
-                        <label for="localDNS">\u{1F3DA}\uFE0F Local DNS</label>
+                        <label for="localDNS">\u{1F3DA}\uFE0F 本地 DNS</label>
                         <input type="text" id="localDNS" name="localDNS" value="${localDNS}"
                             pattern="^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|localhost$"
                             title="Please enter a valid DNS IP Address or localhost!"  required>
                     </div>
                     <div class="form-control">
-                        <label for="vlessTrojanFakeDNS">\u{1F9E2} Fake DNS</label>
+                        <label for="vlessTrojanFakeDNS">\u{1F9E2} 伪造 DNS</label>
                         <div class="input-with-select">
                             <select id="vlessTrojanFakeDNS" name="vlessTrojanFakeDNS">
-                                <option value="true" ${vlessTrojanFakeDNS ? "selected" : ""}>Enabled</option>
-                                <option value="false" ${!vlessTrojanFakeDNS ? "selected" : ""}>Disabled</option>
+                                <option value="true" ${vlessTrojanFakeDNS ? "selected" : ""}>启用</option>
+                                <option value="false" ${!vlessTrojanFakeDNS ? "selected" : ""}>禁用</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-control">
-                        <label for="proxyIP">\u{1F4CD} Proxy IP</label>
+                        <label for="proxyIP">\u{1F4CD} 代理 IP</label>
                         <input type="text" id="proxyIP" name="proxyIP" value="${proxyIP2}">
                     </div>
                     <div class="form-control">
-                        <label for="outProxy">\u2708\uFE0F Chain Proxy</label>
+                        <label for="outProxy">\u2708\uFE0F 链式代理</label>
                         <input type="text" id="outProxy" name="outProxy" value="${outProxy}">
                     </div>
                     <div class="form-control">
-                        <label for="cleanIPs">\u2728 Clean IPs</label>
+                        <label for="cleanIPs">\u2728 纯净 IP</label>
                         <input type="text" id="cleanIPs" name="cleanIPs" value="${cleanIPs.replaceAll(",", " , ")}">
                     </div>
                     <div class="form-control">
-                        <label>\u{1F50E} IP Scanner</label>
+                        <label>\u{1F50E} IP 扫描器</label>
                         <a href="https://scanner.github1.cloud/" id="scanner" name="scanner" target="_blank" style="width: 100%;">
                             <button type="button" class="button">
-                                Scan now
+                                立即扫描
                                 <span class="material-symbols-outlined">open_in_new</span>
                             </button>
                         </a>
                     </div>
                     <div class="form-control">
-                        <label for="enableIPv6">\u{1F51B} IPv6 Configs</label>
+                        <label for="enableIPv6">\u{1F51B} IPv6 配置</label>
                         <div class="input-with-select">
                             <select id="enableIPv6" name="enableIPv6">
-                                <option value="true" ${enableIPv6 ? "selected" : ""}>Enabled</option>
-                                <option value="false" ${!enableIPv6 ? "selected" : ""}>Disabled</option>
+                                <option value="true" ${enableIPv6 ? "selected" : ""}>启用</option>
+                                <option value="false" ${!enableIPv6 ? "selected" : ""}>禁用</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-control">
-                        <label for="customCdnAddrs">\u{1F480} Custom CDN Addrs</label>
+                        <label for="customCdnAddrs">\u{1F480} 自定义 CDN 地址</label>
                         <input type="text" id="customCdnAddrs" name="customCdnAddrs" value="${customCdnAddrs.replaceAll(",", " , ")}">
                     </div>
                     <div class="form-control">
-                        <label for="customCdnHost">\u{1F480} Custom CDN Host</label> 
+                        <label for="customCdnHost">\u{1F480} 自定义 CDN Host</label> 
                         <input type="text" id="customCdnHost" name="customCdnHost" value="${customCdnHost}">
                     </div>
                     <div class="form-control">
-                        <label for="customCdnSni">\u{1F480} Custom CDN SNI</label>
+                        <label for="customCdnSni">\u{1F480} 自定义 CDN SNI</label>
                         <input type="text" id="customCdnSni" name="customCdnSni" value="${customCdnSni}">
                     </div>
                     <div class="form-control">
-                        <label for="bestVLESSTrojanInterval">\u{1F504} Best Interval</label>
+                        <label for="bestVLESSTrojanInterval">\u{1F504} 最优间隔</label>
                         <input type="number" id="bestVLESSTrojanInterval" name="bestVLESSTrojanInterval" min="10" max="90" value="${bestVLESSTrojanInterval}">
                     </div>
                     <div class="form-control" style="padding-top: 10px;">
-                        <label>\u2699\uFE0F Protocols</label>
+                        <label>\u2699\uFE0F 协议</label>
                         <div style="width: 100%; display: grid; grid-template-columns: 1fr 1fr; align-items: baseline; margin-top: 10px;">
                             <div style = "display: flex; justify-content: center; align-items: center;">
                                 <input type="checkbox" id="vlessConfigs" name="vlessConfigs" onchange="handleProtocolChange(event)" value="true" ${vlessConfigs ? "checked" : ""}>
@@ -5570,8 +5570,8 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     <div class="table-container">
                         <table id="ports-block">
                             <tr>
-                                <th style="text-wrap: nowrap; background-color: gray;">Config type</th>
-                                <th style="text-wrap: nowrap; background-color: gray;">Ports</th>
+                                <th style="text-wrap: nowrap; background-color: gray;">配置类型</th>
+                                <th style="text-wrap: nowrap; background-color: gray;">端口</th>
                             </tr>
                             <tr>
                                 <td style="text-align: center; font-size: larger;"><b>TLS</b></td>
