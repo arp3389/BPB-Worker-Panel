@@ -5500,7 +5500,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                             title="Please enter a valid DNS IP Address or localhost!"  required>
                     </div>
                     <div class="form-control">
-                        <label for="vlessTrojanFakeDNS">\u{1F9E2} 伪造 DNS</label>
+                        <label for="vlessTrojanFakeDNS">\u{1F9E2} 伪装 DNS</label>
                         <div class="input-with-select">
                             <select id="vlessTrojanFakeDNS" name="vlessTrojanFakeDNS">
                                 <option value="true" ${vlessTrojanFakeDNS ? "selected" : ""}>启用</option>
@@ -5591,7 +5591,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 <details>
                     <summary><h2>FRAGMENT \u2699\uFE0F</h2></summary>	
                     <div class="form-control">
-                        <label for="fragmentLengthMin">\u{1F4D0} Length</label>
+                        <label for="fragmentLengthMin">\u{1F4D0} 长度</label>
                         <div class="min-max">
                             <input type="number" id="fragmentLengthMin" name="fragmentLengthMin" value="${lengthMin}" min="10" required>
                             <span> - </span>
@@ -5599,7 +5599,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </div>
                     </div>
                     <div class="form-control">
-                        <label for="fragmentIntervalMin">\u{1F55E} Interval</label>
+                        <label for="fragmentIntervalMin">\u{1F55E} 间隔</label>
                         <div class="min-max">
                             <input type="number" id="fragmentIntervalMin" name="fragmentIntervalMin"
                                 value="${intervalMin}" min="1" max="30" required>
@@ -5609,7 +5609,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </div>
                     </div>
                     <div class="form-control">
-                        <label for="fragmentPackets">\u{1F4E6} Packets</label>
+                        <label for="fragmentPackets">\u{1F4E6} 数据包</label>
                         <div class="input-with-select">
                             <select id="fragmentPackets" name="fragmentPackets">
                                 <option value="tlshello" ${fragmentPackets === "tlshello" ? "selected" : ""}>tlshello</option>
@@ -5622,19 +5622,19 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     </div>
                 </details>
                 <details>
-                    <summary><h2>WARP GENERAL \u2699\uFE0F</h2></summary>
+                    <summary><h2>WARP 标准版 \u2699\uFE0F</h2></summary>
                     <div class="form-control">
-                        <label for="warpEndpoints">\u2728 Endpoints</label>
+                        <label for="warpEndpoints">\u2728 端点</label>
                         <input type="text" id="warpEndpoints" name="warpEndpoints" value="${warpEndpoints.replaceAll(",", " , ")}" required>
                     </div>
                     <div class="form-control">
-                        <label style="line-height: 1.5;">\u{1F50E} Scan Endpoint</label>
+                        <label style="line-height: 1.5;">\u{1F50E} 扫描端点</label>
                         <button type="button" class="button" style="padding: 10px 0;" onclick="copyToClipboard('bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/warp/main/endip/install.sh)', false)">
                             复制脚本<span class="material-symbols-outlined">terminal</span>
                         </button>
                     </div>
                     <div class="form-control">
-                        <label for="warpFakeDNS">\u{1F9E2} Fake DNS</label>
+                        <label for="warpFakeDNS">\u{1F9E2} 伪装 DNS</label>
                         <div class="input-with-select">
                             <select id="warpFakeDNS" name="warpFakeDNS">
                                 <option value="true" ${warpFakeDNS ? "selected" : ""}>启用</option>
@@ -5643,40 +5643,40 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </div>
                     </div>
                     <div class="form-control">
-                        <label for="warpPlusLicense">\u2795 Warp+ License</label>
+                        <label for="warpPlusLicense">\u2795 Warp+ 授权</label>
                         <input type="text" id="warpPlusLicense" name="warpPlusLicense" value="${warpPlusLicense}" 
                             pattern="^[a-zA-Z0-9]{8}-[a-zA-Z0-9]{8}-[a-zA-Z0-9]{8}$" 
-                            title="Please enter a valid Warp Plus license in xxxxxxxx-xxxxxxxx-xxxxxxxx format">
+                            title="请输入有效的 Warp Plus 许可证，格式为 xxxxxxxx-xxxxxxxx-xxxxxxxx">
                     </div>
                     <div class="form-control">
-                        <label>\u267B\uFE0F Warp Configs</label>
+                        <label>\u267B\uFE0F Warp 配置</label>
                         <button id="refreshBtn" type="button" class="button" style="padding: 10px 0;" onclick="getWarpConfigs()">
                             更新<span class="material-symbols-outlined">autorenew</span>
                         </button>
                     </div>
                     <div class="form-control">
-                        <label for="bestWarpInterval">\u{1F504} Best Interval</label>
+                        <label for="bestWarpInterval">\u{1F504} 最优间隔</label>
                         <input type="number" id="bestWarpInterval" name="bestWarpInterval" min="10" max="90" value="${bestWarpInterval}">
                     </div>
                 </details>
                 <details>
-                    <summary><h2>WARP PRO \u2699\uFE0F</h2></summary>
+                    <summary><h2>WARP 专业版 \u2699\uFE0F</h2></summary>
                     <div class="form-control">
-                        <label for="hiddifyNoiseMode">\u{1F635}\u200D\u{1F4AB} Hiddify Mode</label>
+                        <label for="hiddifyNoiseMode">\u{1F635}\u200D\u{1F4AB} Hiddify 模式</label>
                         <input type="text" id="hiddifyNoiseMode" name="hiddifyNoiseMode" 
                             pattern="^(m[1-6]|h_[0-9A-Fa-f]{2}|g_([0-9A-Fa-f]{2}_){2}[0-9A-Fa-f]{2})$" 
                             title="Enter 'm1-m6', 'h_HEX', 'g_HEX_HEX_HEX' which HEX can be between 00 to ff"
                             value="${hiddifyNoiseMode}" required>
                     </div>
                     <div class="form-control">
-                        <label for="nikaNGNoiseMode">\u{1F635}\u200D\u{1F4AB} NikaNG Mode</label>
+                        <label for="nikaNGNoiseMode">\u{1F635}\u200D\u{1F4AB} NikaNG 模式</label>
                         <input type="text" id="nikaNGNoiseMode" name="nikaNGNoiseMode" 
                             pattern="^(none|quic|random|[0-9A-Fa-f]+)$" 
                             title="Enter 'none', 'quic', 'random', or any HEX string like 'ee0000000108aaaa'"
                             value="${nikaNGNoiseMode}" required>
                     </div>
                     <div class="form-control">
-                        <label for="noiseCountMin">\u{1F39A}\uFE0F Noise Count</label>
+                        <label for="noiseCountMin">\u{1F39A}\uFE0F Noise 计数</label>
                         <div class="min-max">
                             <input type="number" id="noiseCountMin" name="noiseCountMin"
                                 value="${noiseCountMin}" min="1" required>
@@ -5686,7 +5686,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </div>
                     </div>
                     <div class="form-control">
-                        <label for="noiseSizeMin">\u{1F4CF} Noise Size</label>
+                        <label for="noiseSizeMin">\u{1F4CF} Noise 大小</label>
                         <div class="min-max">
                             <input type="number" id="noiseSizeMin" name="noiseSizeMin"
                                 value="${noiseSizeMin}" min="1" required>
@@ -5696,7 +5696,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </div>
                     </div>
                     <div class="form-control">
-                        <label for="noiseDelayMin">\u{1F55E} Noise Delay</label>
+                        <label for="noiseDelayMin">\u{1F55E} Noise 延迟</label>
                         <div class="min-max">
                             <input type="number" id="noiseDelayMin" name="noiseDelayMin"
                                 value="${noiseDelayMin}" min="1" required>
@@ -6282,7 +6282,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 alert('\u26A0\uFE0F 首先应用设置，然后再更新 Warp 配置！');
                 return false;
             }
-            const confirmReset = confirm('\u26A0\uFE0F Are you sure?');
+            const confirmReset = confirm('\u26A0\uFE0F 你确定?');
             if(!confirmReset) return;
             const refreshBtn = document.getElementById('refreshBtn');
 
