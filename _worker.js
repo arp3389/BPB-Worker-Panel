@@ -5630,15 +5630,15 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     <div class="form-control">
                         <label style="line-height: 1.5;">\u{1F50E} Scan Endpoint</label>
                         <button type="button" class="button" style="padding: 10px 0;" onclick="copyToClipboard('bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/warp/main/endip/install.sh)', false)">
-                            Copy Script<span class="material-symbols-outlined">terminal</span>
+                            复制脚本<span class="material-symbols-outlined">terminal</span>
                         </button>
                     </div>
                     <div class="form-control">
                         <label for="warpFakeDNS">\u{1F9E2} Fake DNS</label>
                         <div class="input-with-select">
                             <select id="warpFakeDNS" name="warpFakeDNS">
-                                <option value="true" ${warpFakeDNS ? "selected" : ""}>Enabled</option>
-                                <option value="false" ${!warpFakeDNS ? "selected" : ""}>Disabled</option>
+                                <option value="true" ${warpFakeDNS ? "selected" : ""}>启用</option>
+                                <option value="false" ${!warpFakeDNS ? "selected" : ""}>禁用</option>
                             </select>
                         </div>
                     </div>
@@ -5651,7 +5651,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     <div class="form-control">
                         <label>\u267B\uFE0F Warp Configs</label>
                         <button id="refreshBtn" type="button" class="button" style="padding: 10px 0;" onclick="getWarpConfigs()">
-                            Update<span class="material-symbols-outlined">autorenew</span>
+                            更新<span class="material-symbols-outlined">autorenew</span>
                         </button>
                     </div>
                     <div class="form-control">
@@ -5707,41 +5707,41 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     </div>
                 </details>
                 <details>
-                    <summary><h2>ROUTING RULES \u2699\uFE0F</h2></summary>
+                    <summary><h2>路由规则 \u2699\uFE0F</h2></summary>
                     <div id="routing-rules" class="form-control" style="margin-bottom: 20px;">			
                         <div class="routing">
                             <input type="checkbox" id="bypass-lan" name="bypass-lan" value="true" ${bypassLAN ? "checked" : ""}>
-                            <label for="bypass-lan">Bypass LAN</label>
+                            <label for="bypass-lan">绕过局域网</label>
                         </div>
                         <div class="routing">
                             <input type="checkbox" id="block-ads" name="block-ads" value="true" ${blockAds ? "checked" : ""}>
-                            <label for="block-ads">Block Ads.</label>
+                            <label for="block-ads">屏蔽广告.</label>
                         </div>
                         <div class="routing">
                             <input type="checkbox" id="bypass-iran" name="bypass-iran" value="true" ${bypassIran ? "checked" : ""}>
-                            <label for="bypass-iran">Bypass Iran</label>
+                            <label for="bypass-iran">绕过伊朗</label>
                         </div>
                         <div class="routing">
                             <input type="checkbox" id="block-porn" name="block-porn" value="true" ${blockPorn ? "checked" : ""}>
-                            <label for="block-porn">Block Porn</label>
+                            <label for="block-porn">屏蔽色情</label>
                         </div>
                         <div class="routing">
                             <input type="checkbox" id="bypass-china" name="bypass-china" value="true" ${bypassChina ? "checked" : ""}>
-                            <label for="bypass-china">Bypass China</label>
+                            <label for="bypass-china">绕过中国</label>
                         </div>
                         <div class="routing">
                             <input type="checkbox" id="block-udp-443" name="block-udp-443" value="true" ${blockUDP443 ? "checked" : ""}>
-                            <label for="block-udp-443">Block QUIC</label>
+                            <label for="block-udp-443">阻止 QUIC</label>
                         </div>
                         <div class="routing">
                             <input type="checkbox" id="bypass-russia" name="bypass-russia" value="true" ${bypassRussia ? "checked" : ""}>
-                            <label for="bypass-russia">Bypass Russia</label>
+                            <label for="bypass-russia">绕过俄罗斯</label>
                         </div>
                     </div>
                 </details>
                 <div id="apply" class="form-control">
                     <div style="grid-column: 2; width: 100%; display: inline-flex;">
-                        <input type="submit" id="applyButton" style="margin-right: 10px;" class="button disabled" value="APPLY SETTINGS \u{1F4A5}" form="configForm">
+                        <input type="submit" id="applyButton" style="margin-right: 10px;" class="button disabled" value="应用设置 \u{1F4A5}" form="configForm">
                         <button type="button" id="resetSettings" style="background: none; margin: 0; border: none; cursor: pointer;">
                             <i class="fa fa-refresh fa-2x fa-border" style="border-radius: .2em; border-color: var(--border-color);" aria-hidden="true"></i>
                         </button>
@@ -5753,8 +5753,8 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
             <div class="table-container">
                 <table id="normal-configs-table">
                     <tr>
-                        <th>Application</th>
-                        <th>Subscription</th>
+                        <th>应用</th>
+                        <th>订阅</th>
                     </tr>
                     <tr>
                         <td>
@@ -5796,11 +5796,11 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                             </div>
                         </td>
                         <td>
-                            <button onclick="openQR('https://${hostName}/sub/${userID}#BPB-Normal', 'Normal Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                            <button onclick="openQR('https://${hostName}/sub/${userID}#BPB-Normal', '常规订阅')" style="margin-bottom: 8px;">
+                                二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/sub/${userID}#BPB-Normal', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
@@ -5821,7 +5821,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=singbox#BPB-Normal', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
@@ -5831,8 +5831,8 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
             <div class="table-container">
                 <table id="full-normal-configs-table">
                     <tr>
-                        <th>Application</th>
-                        <th>Subscription</th>
+                        <th>应用</th>
+                        <th>订阅</th>
                     </tr>
                     <tr>
                         <td>
@@ -5863,10 +5863,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="openQR('https://${hostName}/sub/${userID}?app=xray#BPB-Full-Normal', 'Full normal Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                                二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=xray#BPB-Full-Normal', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
@@ -5878,11 +5878,11 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                             </div>
                         </td>
                         <td>
-                            <button onclick="openQR('sing-box://import-remote-profile?url=https://${hostName}/sub/${userID}?app=sfa#BPB-Full-Normal', 'Normal Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                            <button onclick="openQR('sing-box://import-remote-profile?url=https://${hostName}/sub/${userID}?app=sfa#BPB-Full-Normal', '常规订阅')" style="margin-bottom: 8px;">
+                                二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=sfa#BPB-Full-Normal', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
@@ -5910,11 +5910,11 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                             </div>
                         </td>
                         <td>
-                            <button onclick="openQR('https://${hostName}/sub/${userID}?app=clash#BPB-Full-Normal', 'Normal Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                            <button onclick="openQR('https://${hostName}/sub/${userID}?app=clash#BPB-Full-Normal', '常规订阅')" style="margin-bottom: 8px;">
+                                二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=clash#BPB-Full-Normal', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
@@ -5924,8 +5924,8 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
             <div class="table-container">
                 <table id="frag-sub-table">
                     <tr>
-                        <th style="text-wrap: nowrap;">Application</th>
-                        <th style="text-wrap: nowrap;">Subscription</th>
+                        <th style="text-wrap: nowrap;">应用</th>
+                        <th style="text-wrap: nowrap;">订阅</th>
                     </tr>
                     <tr>
                         <td style="text-wrap: nowrap;">
@@ -5956,10 +5956,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="openQR('https://${hostName}/fragsub/${userID}#BPB-Fragment', 'Fragment Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                                二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/fragsub/${userID}#BPB-Fragment', true)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
@@ -5972,10 +5972,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="openQR('https://${hostName}/fragsub/${userID}?app=hiddify#BPB-Fragment', 'Fragment Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                                二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/fragsub/${userID}?app=hiddify#BPB-Fragment', true)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
@@ -5985,8 +5985,8 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
             <div class="table-container">
                 <table id="normal-configs-table">
                     <tr>
-                        <th>Application</th>
-                        <th>Subscription</th>
+                        <th>应用</th>
+                        <th>订阅</th>
                     </tr>
                     <tr>
                         <td>
@@ -6005,10 +6005,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="openQR('https://${hostName}/warpsub/${userID}?app=xray#BPB-Warp', 'Warp Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                                二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=xray#BPB-Warp', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
@@ -6025,10 +6025,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="openQR('sing-box://import-remote-profile?url=https://${hostName}/warpsub/${userID}?app=singbox#BPB-Warp', 'Warp Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                                二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=singbox#BPB-Warp', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
@@ -6057,10 +6057,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="openQR('https://${hostName}/warpsub/${userID}?app=clash#BPB-Warp', 'Warp Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                                二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=clash#BPB-Warp', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
@@ -6070,8 +6070,8 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
             <div class="table-container">
                 <table id="warp-pro-configs-table">
                     <tr>
-                        <th>Application</th>
-                        <th>Subscription</th>
+                        <th>应用</th>
+                        <th>订阅</th>
                     </tr>
                     <tr>
                         <td>
@@ -6090,10 +6090,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="openQR('https://${hostName}/warpsub/${userID}?app=nikang#BPB-Warp-Pro', 'Warp Pro Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                                二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=nikang#BPB-Warp-Pro', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
@@ -6106,10 +6106,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="openQR('sing-box://import-remote-profile?url=https://${hostName}/warpsub/${userID}?app=hiddify#BPB-Warp-Pro', 'Warp Pro Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                                二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=hiddify#BPB-Warp-Pro', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
@@ -6119,17 +6119,17 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <form id="passwordChangeForm">
-                        <h2>Change Password</h2>
+                        <h2>更改密码</h2>
                         <div class="form-control">
-                            <label for="newPassword">New Password</label>
+                            <label for="newPassword">新密码</label>
                             <input type="password" id="newPassword" name="newPassword" required>
                             </div>
                         <div class="form-control">
-                            <label for="confirmPassword">Confirm Password</label>
+                            <label for="confirmPassword">确认密码</label>
                             <input type="password" id="confirmPassword" name="confirmPassword" required>
                         </div>
                         <div id="passwordError" style="color: red; margin-bottom: 10px;"></div>
-                        <button id="changePasswordBtn" type="submit" class="button">Change Password</button>
+                        <button id="changePasswordBtn" type="submit" class="button">更改密码</button>
                     </form>
                 </div>
             </div>
@@ -6146,7 +6146,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
             <div class="footer">
                 <i class="fa fa-github" style="font-size:36px; margin-right: 10px;"></i>
                 <a class="link" href="https://github.com/bia-pain-bache/BPB-Worker-Panel" style="color: var(--color); text-decoration: underline;" target="_blank">Github</a>
-                <button id="openModalBtn" class="button">Change Password</button>
+                <button id="openModalBtn" class="button">更改密码<</button>
                 <button type="button" id="logout" style="background: none; color: var(--color); margin: 0; border: none; cursor: pointer;">
                     <i class="fa fa-power-off fa-2x" aria-hidden="true"></i>
                 </button>
@@ -6384,7 +6384,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
             textarea.select();
             document.execCommand('copy');
             document.body.removeChild(textarea);
-            alert('\u{1F4CB} Copied to clipboard:\\n\\n' +  value);
+            alert('\u{1F4CB} 已复制到剪贴板:\\n\\n' +  value);
         }
 
         const applySettings = async (event, configForm) => {
