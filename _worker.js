@@ -6226,14 +6226,14 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 qrcodeContainer.lastElementChild.remove();
             });
             resetSettings.addEventListener('click', async () => {
-                const confirmReset = confirm('\u26A0\uFE0F This will reset all panel settings.\\nAre you sure?');
+                const confirmReset = confirm('\u26A0\uFE0F 这将重置所有面板设置.\\n你确定吗?');
                 if(!confirmReset) return;
                 const formData = new FormData();
                 formData.append('resetSettings', 'true');
                 try {
                     document.body.style.cursor = 'wait';
                     const refreshButtonVal = refreshBtn.innerHTML;
-                    refreshBtn.innerHTML = '\u231B Loading...';
+                    refreshBtn.innerHTML = '\u231B 加载...';
 
                     const response = await fetch('/panel', {
                         method: 'POST',
@@ -6244,12 +6244,12 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     document.body.style.cursor = 'default';
                     refreshBtn.innerHTML = refreshButtonVal;
                     if (response.ok) {
-                        alert('\u2705 Panel settings reset to default successfully! \u{1F60E}');
+                        alert('\u2705 面板设置已成功重置为默认值! \u{1F60E}');
                         window.location.reload(true);
                     } else {
                         const errorMessage = await response.text();
                         console.error(errorMessage, response.status);
-                        alert('\u26A0\uFE0F An error occured, Please try again!\\n\u26D4 ' + errorMessage);
+                        alert('\u26A0\uFE0F 发生错误，请重试！\\n\u26D4 ' + errorMessage);
                     }         
                 } catch (error) {
                     console.error('Error:', error);
@@ -6279,7 +6279,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
         const getWarpConfigs = async () => {
             const license = document.getElementById('warpPlusLicense').value;
             if (license !== warpPlusLicense) {
-                alert('\u26A0\uFE0F First APPLY SETTINGS and then update Warp configs!');
+                alert('\u26A0\uFE0F 首先应用设置，然后再更新 Warp 配置！');
                 return false;
             }
             const confirmReset = confirm('\u26A0\uFE0F Are you sure?');
@@ -6289,7 +6289,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
             try {
                 document.body.style.cursor = 'wait';
                 const refreshButtonVal = refreshBtn.innerHTML;
-                refreshBtn.innerHTML = '\u231B Loading...';
+                refreshBtn.innerHTML = '\u231B 加载...';
 
                 const response = await fetch('/update-warp', {
                     method: 'POST',
@@ -6299,11 +6299,11 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 document.body.style.cursor = 'default';
                 refreshBtn.innerHTML = refreshButtonVal;
                 if (response.ok) {
-                    ${isWarpPlus} ? alert('\u2705 Warp configs upgraded to PLUS successfully! \u{1F60E}') : alert('\u2705 Warp configs updated successfully! \u{1F60E}');
+                    ${isWarpPlus} ? alert('\u2705 Warp 配置已成功升级到 PLUS！ \u{1F60E}') : alert('\u2705 Warp 配置已成功更新！ \u{1F60E}');
                 } else {
                     const errorMessage = await response.text();
                     console.error(errorMessage, response.status);
-                    alert('\u26A0\uFE0F An error occured, Please try again!\\n\u26D4 ' + errorMessage);
+                    alert('\u26A0\uFE0F 发生错误，请重试！\\n\u26D4 ' + errorMessage);
                 }         
             } catch (error) {
                 console.error('Error:', error);
@@ -6455,7 +6455,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
             }
 
             if (lengthMin >= lengthMax || intervalMin > intervalMax || noiseCountMin > noiseCountMax || noiseSizeMin > noiseSizeMax || noiseDelayMin > noiseDelayMax) {
-                alert('\u26D4 Minimum should be smaller or equal to Maximum! \u{1FAE4}');               
+                alert('\u26D4 最小值应小于或等于最大值！ \u{1FAE4}');               
                 return false;
             }
 
@@ -6465,7 +6465,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
             }
 
             if (isVless && securityType === 'tls' && vlessPort !== '443') {
-                alert('\u26D4 VLESS TLS port can be only 443 to be used as a proxy chain! \u{1FAE4}');               
+                alert('\u26D4 VLESS TLS 端口只能是 443 才能用作代理链！\u{1FAE4}');               
                 return false;
             }
 
@@ -6477,7 +6477,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
             try {
                 document.body.style.cursor = 'wait';
                 const applyButtonVal = applyButton.value;
-                applyButton.value = '\u231B Loading...';
+                applyButton.value = '\u231B 加载...';
 
                 const response = await fetch('/panel', {
                     method: 'POST',
@@ -6489,12 +6489,12 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 applyButton.value = applyButtonVal;
 
                 if (response.ok) {
-                    alert('\u2705 Parameters applied successfully \u{1F60E}');
+                    alert('\u2705 参数已成功应用 \u{1F60E}');
                     window.location.reload(true);
                 } else {
                     const errorMessage = await response.text();
                     console.error(errorMessage, response.status);
-                    alert('\u26A0\uFE0F Session expired! Please login again.');
+                    alert('\u26A0\uFE0F 会话已过期！请重新登录.');
                     window.location.href = '/login';
                 }           
             } catch (error) {
@@ -6563,7 +6563,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     const errorMessage = await response.text();
                     passwordError.textContent = '\u26A0\uFE0F ' + errorMessage;
                     console.error(errorMessage, response.status);
-                    alert('\u26A0\uFE0F Session expired! Please login again.');
+                    alert('\u26A0\uFE0F 会话已过期！请重新登录.');
                     window.location.href = '/login';
                 } else {
                     const errorMessage = await response.text();
