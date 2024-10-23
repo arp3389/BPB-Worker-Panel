@@ -5749,7 +5749,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 </div>
             </form>
             <hr>            
-            <h2>NORMAL SUB \u{1F517}</h2>
+            <h2>常规订阅 \u{1F517}</h2>
             <div class="table-container">
                 <table id="normal-configs-table">
                     <tr>
@@ -5800,7 +5800,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                                 二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/sub/${userID}#BPB-Normal', false)">
-                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制订阅<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
@@ -5821,13 +5821,13 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=singbox#BPB-Normal', false)">
-                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制订阅<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
                 </table>
             </div>
-            <h2>FULL NORMAL SUB \u{1F517}</h2>
+            <h2>完整普通订阅 \u{1F517}</h2>
             <div class="table-container">
                 <table id="full-normal-configs-table">
                     <tr>
@@ -5862,11 +5862,11 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                             </div>
                         </td>
                         <td>
-                            <button onclick="openQR('https://${hostName}/sub/${userID}?app=xray#BPB-Full-Normal', 'Full normal Subscription')" style="margin-bottom: 8px;">
+                            <button onclick="openQR('https://${hostName}/sub/${userID}?app=xray#BPB-Full-Normal', '全功能常规订阅')" style="margin-bottom: 8px;">
                                 二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=xray#BPB-Full-Normal', false)">
-                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制订阅<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
@@ -5882,7 +5882,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                                 二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=sfa#BPB-Full-Normal', false)">
-                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制订阅<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
@@ -5914,13 +5914,13 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                                 二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=clash#BPB-Full-Normal', false)">
-                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制订阅<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
                 </table>
             </div>
-            <h2>FRAGMENT SUB \u26D3\uFE0F</h2>
+            <h2>FRAGMENT 订阅 \u26D3\uFE0F</h2>
             <div class="table-container">
                 <table id="frag-sub-table">
                     <tr>
@@ -5955,11 +5955,11 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                             </div>
                         </td>
                         <td>
-                            <button onclick="openQR('https://${hostName}/fragsub/${userID}#BPB-Fragment', 'Fragment Subscription')" style="margin-bottom: 8px;">
+                            <button onclick="openQR('https://${hostName}/fragsub/${userID}#BPB-Fragment', 'Fragment 订阅')" style="margin-bottom: 8px;">
                                 二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/fragsub/${userID}#BPB-Fragment', true)">
-                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制订阅<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
@@ -5971,17 +5971,17 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                             </div>
                         </td>
                         <td>
-                            <button onclick="openQR('https://${hostName}/fragsub/${userID}?app=hiddify#BPB-Fragment', 'Fragment Subscription')" style="margin-bottom: 8px;">
+                            <button onclick="openQR('https://${hostName}/fragsub/${userID}?app=hiddify#BPB-Fragment', 'Fragment 订阅')" style="margin-bottom: 8px;">
                                 二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/fragsub/${userID}?app=hiddify#BPB-Fragment', true)">
-                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制订阅<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
                 </table>
             </div>
-            <h2>WARP SUB \u{1F517}</h2>
+            <h2>WARP 订阅 \u{1F517}</h2>
             <div class="table-container">
                 <table id="normal-configs-table">
                     <tr>
@@ -6004,11 +6004,11 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                             </div>
                         </td>
                         <td>
-                            <button onclick="openQR('https://${hostName}/warpsub/${userID}?app=xray#BPB-Warp', 'Warp Subscription')" style="margin-bottom: 8px;">
+                            <button onclick="openQR('https://${hostName}/warpsub/${userID}?app=xray#BPB-Warp', 'Warp 订阅')" style="margin-bottom: 8px;">
                                 二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=xray#BPB-Warp', false)">
-                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制订阅<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
@@ -6024,11 +6024,11 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                             </div>
                         </td>
                         <td>
-                            <button onclick="openQR('sing-box://import-remote-profile?url=https://${hostName}/warpsub/${userID}?app=singbox#BPB-Warp', 'Warp Subscription')" style="margin-bottom: 8px;">
+                            <button onclick="openQR('sing-box://import-remote-profile?url=https://${hostName}/warpsub/${userID}?app=singbox#BPB-Warp', 'Warp 订阅')" style="margin-bottom: 8px;">
                                 二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=singbox#BPB-Warp', false)">
-                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制订阅<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
@@ -6056,17 +6056,17 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                             </div>
                         </td>
                         <td>
-                            <button onclick="openQR('https://${hostName}/warpsub/${userID}?app=clash#BPB-Warp', 'Warp Subscription')" style="margin-bottom: 8px;">
+                            <button onclick="openQR('https://${hostName}/warpsub/${userID}?app=clash#BPB-Warp', 'Warp 订阅')" style="margin-bottom: 8px;">
                                 二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=clash#BPB-Warp', false)">
-                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制订阅<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
                 </table>
             </div>
-            <h2>WARP PRO SUB \u{1F517}</h2>
+            <h2>WARP PRO 订阅 \u{1F517}</h2>
             <div class="table-container">
                 <table id="warp-pro-configs-table">
                     <tr>
@@ -6089,11 +6089,11 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                             </div>
                         </td>
                         <td>
-                            <button onclick="openQR('https://${hostName}/warpsub/${userID}?app=nikang#BPB-Warp-Pro', 'Warp Pro Subscription')" style="margin-bottom: 8px;">
+                            <button onclick="openQR('https://${hostName}/warpsub/${userID}?app=nikang#BPB-Warp-Pro', 'Warp Pro 订阅')" style="margin-bottom: 8px;">
                                 二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=nikang#BPB-Warp-Pro', false)">
-                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制订阅<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
@@ -6105,11 +6105,11 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                             </div>
                         </td>
                         <td>
-                            <button onclick="openQR('sing-box://import-remote-profile?url=https://${hostName}/warpsub/${userID}?app=hiddify#BPB-Warp-Pro', 'Warp Pro Subscription')" style="margin-bottom: 8px;">
+                            <button onclick="openQR('sing-box://import-remote-profile?url=https://${hostName}/warpsub/${userID}?app=hiddify#BPB-Warp-Pro', 'Warp Pro 订阅')" style="margin-bottom: 8px;">
                                 二维码&nbsp;<span class="material-symbols-outlined">qr_code</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=hiddify#BPB-Warp-Pro', false)">
-                                复制子项<span class="material-symbols-outlined">format_list_bulleted</span>
+                                复制订阅<span class="material-symbols-outlined">format_list_bulleted</span>
                             </button>
                         </td>
                     </tr>
